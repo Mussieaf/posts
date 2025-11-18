@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acacia Trading | Event Promotion Ethiopia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'acacia-green': '#2E4A3D',
+                        'acacia-gold': '#D4A017',
+                        'acacia-sand': '#F5F5F0',
+                        'acacia-dark': '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #F5F5F0;
+        }
+        
+        .hero-pattern {
+            background-image: linear-gradient(rgba(46, 74, 61, 0.85), rgba(46, 74, 61, 0.7)), url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Reveal on Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2E4A3D;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1a2e25;
+        }
+    </style>
+</head>
+<body class="text-acacia-dark font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center gap-2 text-white">
+                        <i class="fa-solid fa-tree text-acacia-gold text-2xl"></i>
+                        <span class="font-serif text-2xl font-bold tracking-wide">ACACIA</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-acacia-gold transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-white hover:text-acacia-gold transition-colors font-medium">About</a>
+                    <a href="#services" class="text-white hover:text-acacia-gold transition-colors font-medium">Services</a>
+                    <a href="#portfolio" class="text-white hover:text-acacia-gold transition-colors font-medium">Portfolio</a>
+                    <a href="#contact" class="px-6 py-2 bg-acacia-gold text-acacia-dark font-bold rounded-full hover:bg-white transition-all shadow-lg transform hover:scale-105">
+                        Get in Touch
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-acacia-green absolute w-full top-full left-0 shadow-xl border-t border-gray-700">
+            <div class="px-4 pt-2 pb-8 space-y-2 text-center">
+                <a href="#home" class="block px-3 py-3 text-white hover:bg-white/10 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-3 text-white hover:bg-white/10 rounded-md">About</a>
+                <a href="#services" class="block px-3 py-3 text-white hover:bg-white/10 rounded-md">Services</a>
+                <a href="#portfolio" class="block px-3 py-3 text-white hover:bg-white/10 rounded-md">Portfolio</a>
+                <a href="#contact" class="block px-3 py-3 text-acacia-gold font-bold hover:bg-white/10 rounded-md">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center hero-pattern text-center px-4">
+        <div class="relative z-10 max-w-4xl mx-auto reveal active">
+            <div class="inline-block px-4 py-1 border border-acacia-gold text-acacia-gold rounded-full mb-6 text-sm font-semibold tracking-wider uppercase bg-acacia-green/50 backdrop-blur-sm">
+                Addis Ababa's Premier Event Partner
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+                Connecting Brands to People <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-acacia-gold to-yellow-200">Across Ethiopia</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
+                We specialize in high-impact trade shows, corporate gatherings, and promotional campaigns that resonate with the Ethiopian market.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 bg-acacia-gold text-acacia-dark font-bold rounded-full hover:bg-white transition-all shadow-lg text-lg">
+                    Plan Your Event
+                </a>
+                <a href="#portfolio" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-acacia-green transition-all text-lg">
+                    View Our Work
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white opacity-70">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="reveal">
+                    <p class="text-4xl font-bold text-acacia-green">500+</p>
+                    <p class="text-gray-500 text-sm uppercase tracking-wide mt-2">Events Managed</p>
+                </div>
+                <div class="reveal">
+                    <p class="text-4xl font-bold text-acacia-green">50+</p>
+                    <p class="text-gray-500 text-sm uppercase tracking-wide mt-2">Corporate Clients</p>
+                </div>
+                <div class="reveal">
+                    <p class="text-4xl font-bold text-acacia-green">10y</p>
+                    <p class="text-gray-500 text-sm uppercase tracking-wide mt-2">Experience</p>
+                </div>
+                <div class="reveal">
+                    <p class="text-4xl font-bold text-acacia-green">100%</p>
+                    <p class="text-gray-500 text-sm uppercase tracking-wide mt-2">Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-acacia-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-acacia-gold/20 rounded-full z-0"></div>
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Event Planning in Addis" class="relative z-10 rounded-2xl shadow-2xl w-full object-cover h-[500px]">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg z-20 max-w-xs hidden md:block">
+                            <p class="font-serif text-xl font-bold text-acacia-green">"Rooted in Ethiopia, Aiming Global"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <h4 class="text-acacia-gold font-bold uppercase tracking-wider mb-2">About Acacia Trading</h4>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-acacia-green mb-6">We cultivate experiences that help your business grow.</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Like the Acacia tree that defines our landscape, we are resilient, deeply rooted, and provide a gathering place for communities. Based in the heart of Addis Ababa, Acacia Trading is a full-service event promotion and management company.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Whether you are launching a new product in Bole, hosting an international conference at the AU, or organizing a cultural festival, we bridge the gap between your brand and the Ethiopian audience with cultural intelligence and logistical precision.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fa-solid fa-check text-acacia-gold"></i> Expert Local Knowledge
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fa-solid fa-check text-acacia-gold"></i> End-to-End Event Logistics
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fa-solid fa-check text-acacia-gold"></i> Premium Vendor Network
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-acacia-green font-bold hover:text-acacia-gold transition-colors border-b-2 border-acacia-green hover:border-acacia-gold pb-1">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-acacia-green mb-4">Our Expertise</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive solutions designed to elevate your brand presence.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm reveal">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-acacia-green">
+                        <i class="fa-solid fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-acacia-green mb-3">Corporate Events</h3>
+                    <p class="text-gray-600 mb-4">Seminars, product launches, and gala dinners organized with precision and corporate etiquette suited for international businesses.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm reveal">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6 text-acacia-gold">
+                        <i class="fa-solid fa-bullhorn text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-acacia-green mb-3">Brand Activation</h3>
+                    <p class="text-gray-600 mb-4">We take your brand to the streets and the people. High-energy promotional campaigns in malls, exhibitions, and public spaces.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm reveal">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-acacia-green">
+                        <i class="fa-solid fa-handshake text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-acacia-green mb-3">Trade Shows & Expos</h3>
+                    <p class="text-gray-600 mb-4">Booth design, staffing, and logistical support for trade fairs at the Millennium Hall and Exhibition Center.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm reveal">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6 text-acacia-gold">
+                        <i class="fa-solid fa-music text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-acacia-green mb-3">Concerts & Festivals</h3>
+                    <p class="text-gray-600 mb-4">Large-scale stage setup, sound engineering coordination, and artist management for cultural celebrations.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm reveal">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 text-acacia-green">
+                        <i class="fa-solid fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-acacia-green mb-3">Digital Promotion</h3>
+                    <p class="text-gray-600 mb-4">Complementing physical events with robust social media campaigns targeting the Ethiopian digital landscape.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm reveal">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6 text-acacia-gold">
+                        <i class="fa-solid fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-acacia-green mb-3">Creative Consultancy</h3>
+                    <p class="text-gray-600 mb-4">From concept to execution, we help design the theme, flow, and visual identity of your gathering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Gallery -->
+    <section id="portfolio" class="py-20 bg-acacia-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div>
+                    <h4 class="text-acacia-gold font-bold uppercase tracking-wider mb-2">Recent Works</h4>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold">Moments We Created</h2>
+                </div>
+                <a href="#" class="hidden md:inline-block text-white hover:text-acacia-gold transition-colors mt-4 md:mt-0">View All Projects <i class="fa-solid fa-arrow-right ml-2"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-xl h-80 reveal">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Conference" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <p class="text-acacia-gold font-bold text-sm uppercase">Corporate</p>
+                            <h3 class="text-xl font-bold">Addis Tech Summit</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-xl h-80 reveal">
+                    <img src="https://images.unsplash.com/photo-1475721027767-p5bc2dd987f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Concert" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <p class="text-acacia-gold font-bold text-sm uppercase">Music Festival</p>
+                            <h3 class="text-xl font-bold">Jazz in the Park</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-xl h-80 reveal">
+                    <img src="https://images.unsplash.com/photo-1561489401-fc2876ced162?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trade Show" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <p class="text-acacia-gold font-bold text-sm uppercase">Expo</p>
+                            <h3 class="text-xl font-bold">Coffee Export Trade Fair</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                <a href="#" class="inline-block text-white hover:text-acacia-gold transition-colors">View All Projects <i class="fa-solid fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="reveal">
+                    <h4 class="text-acacia-gold font-bold uppercase tracking-wider mb-2">Get In Touch</h4>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-acacia-green mb-6">Ready to plan your next event?</h2>
+                    <p class="text-gray-600 mb-10">Reach out to us for a consultation. We are located in the heart of Bole, ready to serve.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-acacia-sand flex items-center justify-center text-acacia-green shrink-0">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-acacia-green text-lg">Visit Us</h3>
+                                <p class="text-gray-600">Alemnesh Plaza, 4th Floor<br>Bole Road, Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-acacia-sand flex items-center justify-center text-acacia-green shrink-0">
+                                <i class="fa-solid fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-acacia-green text-lg">Call Us</h3>
+                                <p class="text-gray-600">+251 911 23 45 67<br>+251 116 12 34 56</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-acacia-sand flex items-center justify-center text-acacia-green shrink-0">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-acacia-green text-lg">Email Us</h3>
+                                <p class="text-gray-600">info@acaciatrading.et<br>events@acaciatrading.et</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-acacia-sand p-8 rounded-3xl reveal">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-acacia-green mb-2">Full Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="Abebe Kebede">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-acacia-green mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="+251...">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-acacia-green mb-2">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="you@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-acacia-green mb-2">Event Type</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all">
+                                <option>Corporate Event</option>
+                                <option>Trade Show</option>
+                                <option>Brand Activation</option>
+                                <option>Concert/Festival</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-acacia-green mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="Tell us about your event details..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-acacia-green text-white font-bold rounded-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-acacia-green text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12 border-b border-white/10 pb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-tree text-acacia-gold text-2xl"></i>
+                        <span class="font-serif text-2xl font-bold">ACACIA</span>
+                    </div>
+                    <p class="text-gray-300 max-w-sm leading-relaxed">
+                        Acacia Trading is Ethiopia's leading event promotion agency. We blend international standards with local warmth to create unforgettable experiences.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-xl mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-acacia-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-acacia-gold transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-acacia-gold transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-300 hover:text-acacia-gold transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-xl mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-acacia-gold hover:text-acacia-green transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-acacia-gold hover:text-acacia-green transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-acacia-gold hover:text-acacia-green transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-acacia-gold hover:text-acacia-green transition-all"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2023 Acacia Trading PLC. All rights reserved. Designed in Addis Ababa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Modal (Hidden by default) -->
+    <div id="notification" class="fixed bottom-4 right-4 bg-white border-l-4 border-acacia-green p-6 rounded shadow-2xl transform translate-y-full transition-transform duration-300 z-50">
+        <div class="flex items-center">
+            <i class="fa-solid fa-check-circle text-green-500 text-2xl mr-4"></i>
+            <div>
+                <h4 class="font-bold text-acacia-dark">Message Sent!</h4>
+                <p class="text-sm text-gray-600">Thank you! We will contact you shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-acacia-green', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-acacia-green', 'shadow-lg');
+            }
+        });
+
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const notification = document.getElementById('notification');
+            
+            // Show notification
+            notification.classList.remove('translate-y-full');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide after 3 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-y-full');
+            }, 3000);
+        });
+
+        // Reveal on Scroll Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
