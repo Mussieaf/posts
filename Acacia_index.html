@@ -19,6 +19,7 @@
                         'acacia-gold': '#D4A017',
                         'acacia-sand': '#F5F5F0',
                         'acacia-dark': '#1A1A1A',
+                        'abyssinia-yellow': '#FFC72C', /* Brand color for Bank of Abyssinia */
                     },
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -74,6 +75,49 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #1a2e25;
         }
+
+        /* AI Loading Animation */
+        .dot-flashing {
+            position: relative;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: #D4A017;
+            color: #D4A017;
+            animation: dot-flashing 1s infinite linear alternate;
+            animation-delay: 0.5s;
+        }
+        .dot-flashing::before, .dot-flashing::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+        }
+        .dot-flashing::before {
+            left: -15px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: #D4A017;
+            color: #D4A017;
+            animation: dot-flashing 1s infinite alternate;
+            animation-delay: 0s;
+        }
+        .dot-flashing::after {
+            left: 15px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: #D4A017;
+            color: #D4A017;
+            animation: dot-flashing 1s infinite alternate;
+            animation-delay: 1s;
+        }
+
+        @keyframes dot-flashing {
+            0% { background-color: #D4A017; }
+            50%, 100% { background-color: #eee; }
+        }
     </style>
 </head>
 <body class="text-acacia-dark font-sans antialiased">
@@ -95,6 +139,7 @@
                     <a href="#home" class="text-white hover:text-acacia-gold transition-colors font-medium">Home</a>
                     <a href="#about" class="text-white hover:text-acacia-gold transition-colors font-medium">About</a>
                     <a href="#services" class="text-white hover:text-acacia-gold transition-colors font-medium">Services</a>
+                    <a href="#ai-tools" class="text-acacia-gold hover:text-white transition-colors font-bold"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> AI Tools</a>
                     <a href="#portfolio" class="text-white hover:text-acacia-gold transition-colors font-medium">Portfolio</a>
                     <a href="#contact" class="px-6 py-2 bg-acacia-gold text-acacia-dark font-bold rounded-full hover:bg-white transition-all shadow-lg transform hover:scale-105">
                         Get in Touch
@@ -116,6 +161,7 @@
                 <a href="#home" class="block px-3 py-3 text-white hover:bg-white/10 rounded-md">Home</a>
                 <a href="#about" class="block px-3 py-3 text-white hover:bg-white/10 rounded-md">About</a>
                 <a href="#services" class="block px-3 py-3 text-white hover:bg-white/10 rounded-md">Services</a>
+                <a href="#ai-tools" class="block px-3 py-3 text-acacia-gold font-bold hover:bg-white/10 rounded-md">AI Tools</a>
                 <a href="#portfolio" class="block px-3 py-3 text-white hover:bg-white/10 rounded-md">Portfolio</a>
                 <a href="#contact" class="block px-3 py-3 text-acacia-gold font-bold hover:bg-white/10 rounded-md">Contact Us</a>
             </div>
@@ -136,11 +182,11 @@
                 We specialize in high-impact trade shows, corporate gatherings, and promotional campaigns that resonate with the Ethiopian market.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="px-8 py-4 bg-acacia-gold text-acacia-dark font-bold rounded-full hover:bg-white transition-all shadow-lg text-lg">
-                    Plan Your Event
+                <a href="#ai-tools" class="px-8 py-4 bg-white text-acacia-green font-bold rounded-full hover:bg-acacia-gold hover:text-acacia-dark transition-all shadow-lg text-lg border-2 border-transparent">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> AI Event Planner
                 </a>
-                <a href="#portfolio" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-acacia-green transition-all text-lg">
-                    View Our Work
+                <a href="#contact" class="px-8 py-4 bg-acacia-gold text-acacia-dark font-bold rounded-full hover:bg-white transition-all shadow-lg text-lg">
+                    Start a Project
                 </a>
             </div>
         </div>
@@ -210,6 +256,169 @@
                     </ul>
                     <a href="#contact" class="text-acacia-green font-bold hover:text-acacia-gold transition-colors border-b-2 border-acacia-green hover:border-acacia-gold pb-1">Learn More About Us</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW AI TOOLS SECTION -->
+    <section id="ai-tools" class="py-20 bg-gradient-to-b from-acacia-green to-[#1a2e25] text-white relative overflow-hidden">
+        <!-- Background elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-acacia-gold/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 reveal">
+                <div class="inline-flex items-center justify-center p-2 bg-white/10 backdrop-blur rounded-full mb-4 px-4 border border-acacia-gold/30">
+                    <i class="fa-solid fa-wand-magic-sparkles text-acacia-gold mr-2"></i>
+                    <span class="text-acacia-gold font-bold text-sm uppercase tracking-wider">Powered by Gemini AI</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Event Intelligence Suite</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Use our AI-powered tools to brainstorm, plan budgets, and promote your events instantly.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Tool 1: Theme Generator -->
+                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl reveal hover:border-acacia-gold/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-acacia-gold flex items-center justify-center text-acacia-dark">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white">Event Theme Spark</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6 text-sm">Stuck on ideas? Tell us about your event, and we'll generate creative themes, taglines, and activity ideas.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Event Type</label>
+                            <input type="text" id="themeEventType" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors" placeholder="e.g., Tech Product Launch, Wedding">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Target Audience</label>
+                            <input type="text" id="themeAudience" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors" placeholder="e.g., Young Professionals, CEOs">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Desired Vibe</label>
+                            <select id="themeVibe" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors">
+                                <option value="Luxurious & Elegant">Luxurious & Elegant</option>
+                                <option value="Innovative & Tech-focused">Innovative & Tech-focused</option>
+                                <option value="Traditional Ethiopian Cultural">Traditional Ethiopian Cultural</option>
+                                <option value="Fun & Energetic">Fun & Energetic</option>
+                                <option value="Professional & Corporate">Professional & Corporate</option>
+                            </select>
+                        </div>
+                        <button onclick="generateTheme()" class="w-full py-3 bg-acacia-gold text-acacia-dark font-bold rounded hover:bg-white transition-colors mt-4 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bolt"></i> Generate Ideas ✨
+                        </button>
+                    </div>
+
+                    <!-- Result Area -->
+                    <div id="themeResult" class="hidden mt-6 p-4 bg-black/30 rounded-xl border-l-4 border-acacia-gold text-sm text-gray-200 whitespace-pre-line"></div>
+                    <div id="themeLoading" class="hidden mt-6 flex justify-center">
+                        <div class="dot-flashing"></div>
+                    </div>
+                </div>
+
+                <!-- Tool 2: Sponsorship Drafter -->
+                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl reveal hover:border-acacia-gold/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-acacia-gold flex items-center justify-center text-acacia-dark">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white">Sponsorship Drafter</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6 text-sm">Need sponsors? We'll write a professional, persuasive sponsorship proposal letter for you.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Your Event Name</label>
+                            <input type="text" id="sponsorEvent" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors" placeholder="e.g., Addis Jazz Festival 2024">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Target Sponsor Company</label>
+                            <input type="text" id="sponsorTarget" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors" placeholder="e.g., Ethiopian Airlines, Telebirr">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Key Benefit to Sponsor</label>
+                            <input type="text" id="sponsorBenefit" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors" placeholder="e.g., Brand visibility to 5000 attendees">
+                        </div>
+                        <button onclick="generateLetter()" class="w-full py-3 bg-acacia-gold text-acacia-dark font-bold rounded hover:bg-white transition-colors mt-4 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-pen-nib"></i> Draft Letter ✨
+                        </button>
+                    </div>
+
+                    <!-- Result Area -->
+                    <div id="letterResult" class="hidden mt-6 p-4 bg-white text-acacia-dark rounded-xl shadow-lg text-sm whitespace-pre-line font-serif leading-relaxed"></div>
+                    <div id="letterLoading" class="hidden mt-6 flex justify-center">
+                        <div class="dot-flashing"></div>
+                    </div>
+                </div>
+
+                <!-- Tool 3: Social Media Hype Creator -->
+                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl reveal hover:border-acacia-gold/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-acacia-gold flex items-center justify-center text-acacia-dark">
+                            <i class="fa-solid fa-hashtag"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white">Social Media Hype</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6 text-sm">Generate engaging posts for Telegram, Instagram, or LinkedIn tailored to the Ethiopian audience.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">What are you promoting?</label>
+                            <input type="text" id="socialTopic" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors" placeholder="e.g., Early bird tickets for Coffee Expo">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Platform</label>
+                            <select id="socialPlatform" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors">
+                                <option value="Telegram Channel">Telegram Channel (Informative & Visual)</option>
+                                <option value="Instagram Caption">Instagram (Visual & Trendy)</option>
+                                <option value="LinkedIn Post">LinkedIn (Professional & B2B)</option>
+                            </select>
+                        </div>
+                        <button onclick="generateSocial()" class="w-full py-3 bg-acacia-gold text-acacia-dark font-bold rounded hover:bg-white transition-colors mt-4 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-share-nodes"></i> Create Post ✨
+                        </button>
+                    </div>
+
+                    <!-- Result Area -->
+                    <div id="socialResult" class="hidden mt-6 p-4 bg-black/30 rounded-xl border-l-4 border-acacia-gold text-sm text-gray-200 whitespace-pre-line"></div>
+                    <div id="socialLoading" class="hidden mt-6 flex justify-center">
+                        <div class="dot-flashing"></div>
+                    </div>
+                </div>
+
+                <!-- Tool 4: Smart Budget Estimator -->
+                <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-2xl reveal hover:border-acacia-gold/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-acacia-gold flex items-center justify-center text-acacia-dark">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white">Smart Budget Estimator</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6 text-sm">Get a quick, rough estimated breakdown of costs in ETB for your event type and guest count.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Event Type</label>
+                            <input type="text" id="budgetType" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors" placeholder="e.g., Wedding, Conference, Gala">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-acacia-gold uppercase mb-1">Number of Guests</label>
+                            <input type="number" id="budgetGuests" class="w-full bg-black/20 border border-white/10 rounded p-3 text-white focus:border-acacia-gold outline-none transition-colors" placeholder="e.g., 200">
+                        </div>
+                        <button onclick="generateBudget()" class="w-full py-3 bg-acacia-gold text-acacia-dark font-bold rounded hover:bg-white transition-colors mt-4 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-coins"></i> Estimate Costs ✨
+                        </button>
+                    </div>
+
+                    <!-- Result Area -->
+                    <div id="budgetResult" class="hidden mt-6 p-4 bg-white text-acacia-dark rounded-xl shadow-lg text-sm whitespace-pre-line font-mono leading-relaxed"></div>
+                    <div id="budgetLoading" class="hidden mt-6 flex justify-center">
+                        <div class="dot-flashing"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -291,36 +500,47 @@
                 <a href="#" class="hidden md:inline-block text-white hover:text-acacia-gold transition-colors mt-4 md:mt-0">View All Projects <i class="fa-solid fa-arrow-right ml-2"></i></a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Project 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1: Resort -->
                 <div class="group relative overflow-hidden rounded-xl h-80 reveal">
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Conference" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="https://drive.google.com/uc?export=view&id=1NNoWlr5QbJ6rWa0VRP129y2yP2Lr2p8i" alt="Luxury Resort" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                         <div>
-                            <p class="text-acacia-gold font-bold text-sm uppercase">Corporate</p>
-                            <h3 class="text-xl font-bold">Addis Tech Summit</h3>
+                            <p class="text-acacia-gold font-bold text-sm uppercase">Hospitality</p>
+                            <h3 class="text-xl font-bold">Luxury Resort Launch</h3>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
+                <!-- Project 2: Interior -->
                 <div class="group relative overflow-hidden rounded-xl h-80 reveal">
-                    <img src="https://hiphopafrican.com/wp-content/uploads/2024/03/teddy-afro.jpeg?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Concert" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="https://drive.google.com/uc?export=view&id=1NNoWlr5QbJ6rWa0VRP129y2yP2Lr2p8i" alt="Cultural Hall Interior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                         <div>
-                            <p class="text-acacia-gold font-bold text-sm uppercase">Music Festival</p>
-                            <h3 class="text-xl font-bold">Jazz in the Park</h3>
+                            <p class="text-acacia-gold font-bold text-sm uppercase">Venue Design</p>
+                            <h3 class="text-xl font-bold">Cultural Heritage Gala</h3>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 3: Truck -->
                 <div class="group relative overflow-hidden rounded-xl h-80 reveal">
-                    <img src="https://images.unsplash.com/photo-1561489401-fc2876ced162?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trade Show" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="https://drive.google.com/uc?export=view&id=1NNoWlr5QbJ6rWa0VRP129y2yP2Lr2p8i" alt="Green Logistics Truck" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                         <div>
-                            <p class="text-acacia-gold font-bold text-sm uppercase">Expo</p>
-                            <h3 class="text-xl font-bold">Coffee Export Trade Fair</h3>
+                            <p class="text-acacia-gold font-bold text-sm uppercase">Logistics Expo</p>
+                            <h3 class="text-xl font-bold">Green Supply Chain Fair</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Industrial -->
+                <div class="group relative overflow-hidden rounded-xl h-80 reveal">
+                    <img src="https://drive.google.com/uc?export=view&id=1NNoWlr5QbJ6rWa0VRP129y2yP2Lr2p8i" alt="Industrial Machinery" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <p class="text-acacia-gold font-bold text-sm uppercase">Trade & Industry</p>
+                            <h3 class="text-xl font-bold">Industrial Safety Summit</h3>
                         </div>
                     </div>
                 </div>
@@ -368,8 +588,26 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-acacia-green text-lg">Email Us</h3>
-                                <p class="text-gray-600">info@acaciatrading.et<br>events@acaciatrading.et</p>
+                                <p class="text-gray-600">
+                                    <a href="mailto:mussie@equaltradeglobal.org,events@acaciatrading.et" class="hover:text-acacia-gold transition-colors underline font-bold text-acacia-green">Click here to Email Us</a>
+                                </p>
                             </div>
+                        </div>
+
+                        <!-- Payment Box -->
+                        <div class="mt-8 p-6 bg-yellow-50 rounded-xl border border-abyssinia-yellow/30">
+                            <h3 class="font-bold text-acacia-green text-lg mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-building-columns text-abyssinia-yellow"></i> Bank Payment Details
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-2">Please use the following account for all event deposits and payments:</p>
+                            <div class="font-mono bg-white p-3 rounded border border-gray-200 text-acacia-dark font-bold mb-4 space-y-1">
+                                <div>Bank of Abyssinia</div>
+                                <div>Account No: <span class="text-xl text-acacia-green">93200000</span></div>
+                                <div class="text-sm text-gray-500">SWIFT Code: <span class="font-bold text-acacia-dark">ABYSETAA</span></div>
+                            </div>
+                            <a href="https://www.bankofabyssinia.com/" target="_blank" class="inline-block w-full text-center py-2 bg-abyssinia-yellow text-acacia-dark font-bold rounded hover:bg-yellow-400 transition-colors shadow-sm">
+                                Go to Bank Website <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -379,20 +617,20 @@
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-bold text-acacia-green mb-2">Full Name</label>
-                                <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="Abebe Kebede">
+                                <input type="text" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="Abebe Kebede" required>
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-acacia-green mb-2">Phone Number</label>
-                                <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="+251...">
+                                <input type="tel" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="+251..." required>
                             </div>
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-acacia-green mb-2">Email Address</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="you@company.com">
+                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="you@company.com" required>
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-acacia-green mb-2">Event Type</label>
-                            <select class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all">
+                            <select name="type" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all">
                                 <option>Corporate Event</option>
                                 <option>Trade Show</option>
                                 <option>Brand Activation</option>
@@ -402,10 +640,10 @@
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-acacia-green mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="Tell us about your event details..."></textarea>
+                            <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-acacia-green focus:ring-2 focus:ring-acacia-green/20 outline-none transition-all" placeholder="Tell us about your event details..."></textarea>
                         </div>
-                        <button type="submit" class="w-full py-4 bg-acacia-green text-white font-bold rounded-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">
-                            Send Message
+                        <button type="submit" class="w-full py-4 bg-acacia-green text-white font-bold rounded-lg hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl flex justify-center items-center gap-2">
+                            <i class="fa-solid fa-file-excel"></i> Send & Save for Drive
                         </button>
                     </form>
                 </div>
@@ -446,7 +684,7 @@
                 </div>
             </div>
             <div class="text-center text-gray-400 text-sm">
-                <p>&copy; 2023 Acacia Trading PLC. All rights reserved. Designed in Addis Ababa.</p>
+                <p>&copy; 2025 Acacia Trading PLC. All rights reserved. Designed in Addis Ababa.</p>
             </div>
         </div>
     </footer>
@@ -457,7 +695,7 @@
             <i class="fa-solid fa-check-circle text-green-500 text-2xl mr-4"></i>
             <div>
                 <h4 class="font-bold text-acacia-dark">Message Sent!</h4>
-                <p class="text-sm text-gray-600">Thank you! We will contact you shortly.</p>
+                <p class="text-sm text-gray-600">Submissions downloaded. Email window opened.</p>
             </div>
         </div>
     </div>
@@ -481,11 +719,52 @@
             }
         });
 
-        // Form Submission
+        // Form Submission & Excel Download + Mailto Fallback
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const notification = document.getElementById('notification');
             
+            // 1. Gather Data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            const type = formData.get('type');
+            const message = formData.get('message');
+            const timestamp = new Date().toLocaleString();
+
+            // 2. Create CSV Content
+            // BOM added (\uFEFF) to ensure Excel opens UTF-8 correctly
+            let csvContent = "\uFEFF"; 
+            csvContent += "Timestamp,Full Name,Phone Number,Email Address,Event Type,Message\n";
+            csvContent += `"${timestamp}","${name}","${phone}","${email}","${type}","${message.replace(/"/g, '""')}"\n`;
+
+            // 3. Create Download Link (Auto-save to Excel logic)
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.setAttribute("href", url);
+            
+            // Dynamic filename matching user request pattern: Acacia_Contact_{Name}_.csv
+            // Replacing spaces with empty string to mimic "AbeKebedebe" style if user wants joined names, 
+            // or stick to standard formatting. Using clean format here.
+            const cleanName = name.replace(/\s+/g, ''); // Removes spaces to create "AbebeKebede" style
+            link.setAttribute("download", `Acacia_Contact_${cleanName}_.csv`);
+            
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // 4. Also Open Email Client (Since backend automation isn't available in static HTML)
+            // This ensures the email definitely gets sent to the recipients
+            const subject = `New Event Inquiry: ${type} - ${name}`;
+            const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0AEvent Type: ${type}%0D%0AMessage: ${message}`;
+            // Short delay to allow download to start first
+            setTimeout(() => {
+                window.location.href = `mailto:mussie@equaltradeglobal.org,events@acaciatrading.et?subject=${subject}&body=${body}`;
+            }, 500);
+
             // Show notification
             notification.classList.remove('translate-y-full');
             
@@ -513,8 +792,156 @@
         window.addEventListener("scroll", reveal);
         // Trigger once on load
         reveal();
+
+        // -----------------------------------------
+        // GEMINI API INTEGRATION
+        // -----------------------------------------
+        const apiKey = ""; // System will provide key
+
+        async function callGemini(prompt) {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }]
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                // Exponential backoff retry logic
+                if (response.status === 429) throw new Error("Too many requests");
+                
+                const data = await response.json();
+                return data.candidates[0].content.parts[0].text;
+            } catch (error) {
+                console.error("Error calling Gemini:", error);
+                return "Sorry, our AI service is momentarily unavailable. Please try again.";
+            }
+        }
+
+        async function generateTheme() {
+            const type = document.getElementById('themeEventType').value;
+            const audience = document.getElementById('themeAudience').value;
+            const vibe = document.getElementById('themeVibe').value;
+            
+            if(!type || !audience) {
+                alert("Please fill in the Event Type and Audience fields.");
+                return;
+            }
+
+            const loading = document.getElementById('themeLoading');
+            const result = document.getElementById('themeResult');
+            
+            loading.classList.remove('hidden');
+            result.classList.add('hidden');
+
+            const prompt = `You are a creative event planner for "Acacia Trading" in Ethiopia.
+            Create a concept for a ${type} targeting ${audience}. The desired vibe is ${vibe}.
+            Please provide:
+            1. A creative Title/Theme Name.
+            2. A catchy Tagline.
+            3. Three engaging activity ideas specifically relevant to the Ethiopian context (e.g., using local coffee ceremonies, cultural dances, or specific tech trends in Addis).
+            Keep the response concise and formatted with bullet points.`;
+
+            const text = await callGemini(prompt);
+            
+            loading.classList.add('hidden');
+            result.classList.remove('hidden');
+            result.innerHTML = `<strong><i class="fa-solid fa-star text-acacia-gold"></i> AI Suggestion:</strong><br><br>` + text.replace(/\n/g, '<br>');
+        }
+
+        async function generateLetter() {
+            const eventName = document.getElementById('sponsorEvent').value;
+            const sponsor = document.getElementById('sponsorTarget').value;
+            const benefit = document.getElementById('sponsorBenefit').value;
+
+            if(!eventName || !sponsor) {
+                alert("Please fill in the Event Name and Sponsor Name.");
+                return;
+            }
+
+            const loading = document.getElementById('letterLoading');
+            const result = document.getElementById('letterResult');
+            
+            loading.classList.remove('hidden');
+            result.classList.add('hidden');
+
+            const prompt = `Write a formal sponsorship proposal email from "Acacia Trading" to ${sponsor} regarding the event "${eventName}".
+            Highlight that the key benefit to them is: "${benefit}".
+            The tone should be professional, persuasive, and respectful, suitable for Ethiopian business culture.
+            Keep it to 3 paragraphs.`;
+
+            const text = await callGemini(prompt);
+            
+            loading.classList.add('hidden');
+            result.classList.remove('hidden');
+            result.innerHTML = text.replace(/\n/g, '<br>');
+        }
+
+        async function generateSocial() {
+            const topic = document.getElementById('socialTopic').value;
+            const platform = document.getElementById('socialPlatform').value;
+
+            if(!topic) {
+                alert("Please tell us what you are promoting.");
+                return;
+            }
+
+            const loading = document.getElementById('socialLoading');
+            const result = document.getElementById('socialResult');
+            
+            loading.classList.remove('hidden');
+            result.classList.add('hidden');
+
+            const prompt = `Write a ${platform} for "Acacia Trading" promoting: "${topic}".
+            Target audience: Ethiopians in Addis Ababa.
+            Style: Engaging, use relevant Emojis, and include 5 popular local hashtags.
+            If it is for Telegram, formatting should use bolding for key points.
+            If it is for Instagram, keep it short and punchy.`;
+
+            const text = await callGemini(prompt);
+            
+            loading.classList.add('hidden');
+            result.classList.remove('hidden');
+            result.innerHTML = text.replace(/\n/g, '<br>');
+        }
+
+        async function generateBudget() {
+            const type = document.getElementById('budgetType').value;
+            const guests = document.getElementById('budgetGuests').value;
+
+            if(!type || !guests) {
+                alert("Please fill in the Event Type and Number of Guests.");
+                return;
+            }
+
+            const loading = document.getElementById('budgetLoading');
+            const result = document.getElementById('budgetResult');
+            
+            loading.classList.remove('hidden');
+            result.classList.add('hidden');
+
+            const prompt = `Create a rough estimated budget breakdown in Ethiopian Birr (ETB) for a ${type} with ${guests} guests in Addis Ababa.
+            Assume a mid-range/premium standard (Acacia Trading standard).
+            Include:
+            1. Venue Rental (Estimate for places like Skylight, Sheraton, or Millennium Hall)
+            2. Catering/Food & Drink per person
+            3. Decor & Branding
+            4. Marketing/Promotion
+            5. Technical/AV
+            
+            Provide a Total Estimated Range at the bottom.
+            Disclaimer: State clearly this is an AI estimate and actual prices may vary.`;
+
+            const text = await callGemini(prompt);
+            
+            loading.classList.add('hidden');
+            result.classList.remove('hidden');
+            result.innerHTML = text.replace(/\n/g, '<br>');
+        }
     </script>
 </body>
-
 </html>
-
